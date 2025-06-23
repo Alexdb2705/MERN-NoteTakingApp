@@ -28,7 +28,7 @@ export async function updateNote(req, res) {
     await Note.findByIdAndUpdate(req.params.id, { title, content });
     res.status(200).json({ message: "Note updated succesfully" });
   } catch (error) {
-    console.error("Error in createNote controller", error);
+    console.error("Error in updateNote controller", error);
     res.status(500).json({ message: "Internal server error" });
   }
 }
